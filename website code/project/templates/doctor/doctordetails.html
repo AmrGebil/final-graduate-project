@@ -1,0 +1,121 @@
+{% extends 'testbase.html' %}
+{% block title %}Doctor Details {% endblock title%}
+
+{% block content %}
+
+
+    <div class="container"style="padding-left:50px; margin-top: 30px;" >
+        <div class="row"style="justify-content: center;">
+            <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>Doctor informations</h4></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Name: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_name}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Age: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_age}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Sex: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_sex}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Governorate: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_governorate}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> City: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_city}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Specialty: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_specialty}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic name: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_clinic_name}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic location: <span style="font-size: 25px; font-weight: 100; color: #030303;">
+                                 <i class="fa fa-map-marker"></i> {{doctor.his_clinic_location}}
+                            </span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic number: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_clinic_number}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic start at<span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_clinic_start_at}} Am</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic finsh at: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_clinic_finsh_at}} Pm</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Clinic price: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_clinic_price}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> His email for contact: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_email_for_connect}}</span></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> His number for contact: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{doctor.his_number_for_connect}}</span></h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4" >
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <h3>Info Summery</h3>
+                        </div>
+                        <div class="job_content">
+                            <ul style="color:#030303 ;">
+                                <li style="color: #13C5DD;">His Specialty: <span style="font-size: 25px; font-weight: 100; color: #030303; font-size: 17px;">{{doctor.his_specialty}}</span></li>
+                                <li style="color: #13C5DD;">Clinic location: <span style="font-size: 25px; font-weight: 100; color: #030303;font-size: 17px;">{{doctor.his_clinic_location}}</span></li>
+                                <li style="color: #13C5DD;">Clinic number: <span style="font-size: 25px; font-weight: 100; color: #030303;font-size: 17px;">{{doctor.his_clinic_number}}</span></li>
+                                <li style="color: #13C5DD;">Clinic price: <span style="font-size: 25px; font-weight: 100; color: #030303;font-size: 17px;">{{doctor.his_clinic_price}}</span></li>
+                                <li style="color: #13C5DD;">Clinic time <span style="font-size: 25px; font-weight: 100; color: #030303;font-size: 17px;">from {{doctor.his_clinic_start_at}} Am to  {{doctor.his_clinic_finsh_at}} Pm  </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="share_wrap d-flex">
+                        <span style="font-weight:1000; color: #030303;"> Social media:</span>
+                        <ul>
+
+                            <li style="padding-top: 10px;"><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="{{doctor.his_twitter_account}}"target="_blank"><i class="fab fa-twitter"></i></a> </li>
+                            <li style="padding-top: 10px;"><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=100007867337208"target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                            <li style="padding-top: 10px;"><a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="{{doctor.his_instagram_account}}"target="_blank"><i class="fab fa-instagram"></i></a> </li>
+                            <li style="padding-top: 10px;"><a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.linkedin.com/in/amr-gebil-557a9024a/"target="_blank"><i class="fab fa-linkedin-in"></i></a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

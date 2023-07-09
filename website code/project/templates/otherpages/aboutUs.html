@@ -1,0 +1,74 @@
+
+{% extends "testbase.html" %}
+{% load static%}
+{% block title %} About Us {% endblock title%}
+{% block content %}
+<!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/about.jpg' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
+                        <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
+                    </div>
+                    <p> This website provides services to help users find good doctors, nurses, obtain reliable information about their disease, and find information about first aid that they may need.
+
+Find excellent doctors: Whether you're looking for a trusted local physician or seeking a specialist in a specific field, the website can assist you in finding skilled and qualified doctors to meet your healthcare needs.
+
+Locate skilled nurses: Whether you require home care nursing or are searching for a nurse specialized in a particular area, the website can help you find exceptional and experienced nurses who can provide the necessary care for you or your loved ones.
+
+Valuable information about your disease: The website offers reliable and insightful resources to gather information about your specific illness. You will find articles and tips that aid in better understanding your health condition and enable you to make informed decisions about your healthcare.
+
+Access first aid information: If you're seeking information about first aid for emergencies, the website provides comprehensive and useful guidance on how to handle different emergency situations. You will find instructions and directions that assist you in taking appropriate steps during emergencies before specialized medical care arrives.
+
+User-friendly experience: We prioritize providing a seamless user experience, ensuring that the website is easy to navigate and interact with, making it convenient for users to access the desired services and information.</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Doctors</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'doctors_list' %}" target="_blank">Find Doctor</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-regular fa-user-nurse text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Nurses</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'nurses_List' %}" target="_blank">Find Nurses</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-disease text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Disease</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'diseaseKnowledge' %}" target="_blank">Find Disease</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-solid fa-notes-medical text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Frist Aids</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'fristAid' %}" target="_blank" >Find First Aid</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6" style=" margin-left: 280px;">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-solid fa-user text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Know type skin disease</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'predict_image' %}" target="_blank" >know</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+{% endblock content %}

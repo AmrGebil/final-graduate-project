@@ -1,0 +1,74 @@
+{% extends "testbase.html" %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+<div style="margin-left:400px ;">
+
+    <div class="row my-3 p-3 ">
+        <img class="rounded-circle account-img" src="{{ user.profile.avatar.url }} " style="cursor: pointer; width: 100px; height: 100px;"/>
+        <a style=" margin-left: 700px; width:50px; height: 40px;" class="btn btn-dark border-0 w-25" href="{% url 'medicalhistory' %}">View your medical history data</a>
+    </div>
+    {% if user_form.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <div id="form_errors">
+                {% for key, value in user_form.errors.items %}
+                    <strong>{{ value }}</strong>
+                {% endfor %}
+            </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+    <div class="form-content ">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Username:</label>
+                            {{ user_form.username }}
+                        <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Email:</label>
+                            {{ user_form.email }}
+                    </div>
+                    <div class="form-group">
+                        <a href="{% url 'password_change' %}">Change Password</a>
+                        <hr>
+                        <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Change Avatar:</label>
+                        {{ profile_form.avatar }}
+                    </div>
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Frist name:</label> {{ profile_form.first_name }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Last name:</label> {{ profile_form.last_name }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Age:</label> {{ profile_form.age }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Phone number:</label> {{ profile_form.phone_number }}
+                    <hr>
+                    <h3 style=" color: #13C5DD;" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Your Medical history</h3>
+
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">illnesses_numbers:</label> {{ profile_form.illnesses_numbers }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">illnesses:</label> {{ profile_form.illnesses }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">illnesses_descriptions:</label> {{ profile_form.illnesses_descriptions }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">allergies:</label> {{ profile_form.allergies }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">surgeries:</label> {{ profile_form.surgeries }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">immunizations:</label> {{ profile_form.immunizations }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">results_of_physical_exams_and_tests:</label> {{ profile_form.results_of_physical_exams_and_tests }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">medicines:</label> {{ profile_form.medicines }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">medical_rays:</label> {{ profile_form.medical_rays }}
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">health_habits:</label> {{ profile_form.health_habits }}
+                    <hr>
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Change tests_images:</label>
+                        {{ profile_form.physical_exams_and_tests_images }}
+                    <hr>
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Change medicines_images:</label>
+                        {{ profile_form.medicines_images }}
+                    <hr>
+                    <label class="small mb-1" style=" font-size: 17px; font-weight: 300px; color: #030303; ">Change medical_rays_images:</label>
+                        {{ profile_form.medical_rays_images }}
+                </div>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
+            <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+        </form>
+    </div>
+    </div>
+
+{% endblock content %}

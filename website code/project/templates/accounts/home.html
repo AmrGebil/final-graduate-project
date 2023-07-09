@@ -1,0 +1,246 @@
+{% extends "testbase.html" %}
+{% load static%}
+{% block title %} Home {% endblock title%}
+{% block content %}
+ <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To TECHCARE</h5>
+                    <h1 class="display-1 text-white mb-md-4">Best Healthcare Solution In Your City</h1>
+                    <div class="pt-2">
+                        <a href="{% url 'doctors_list' %}" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
+                        <a href="{% url 'nurses_List' %}" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Find Nurse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+<!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/about.jpg' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
+                        <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
+                    </div>
+                    <p> This website provides services to help users find good doctors, nurses, obtain reliable information about their disease, and find information about first aid that they may need.
+
+Find excellent doctors: Whether you're looking for a trusted local physician or seeking a specialist in a specific field, the website can assist you in finding skilled and qualified doctors to meet your healthcare needs.
+
+Locate skilled nurses: Whether you require home care nursing or are searching for a nurse specialized in a particular area, the website can help you find exceptional and experienced nurses who can provide the necessary care for you or your loved ones.
+
+Valuable information about your disease: The website offers reliable and insightful resources to gather information about your specific illness. You will find articles and tips that aid in better understanding your health condition and enable you to make informed decisions about your healthcare.
+
+Access first aid information: If you're seeking information about first aid for emergencies, the website provides comprehensive and useful guidance on how to handle different emergency situations. You will find instructions and directions that assist you in taking appropriate steps during emergencies before specialized medical care arrives.
+
+User-friendly experience: We prioritize providing a seamless user experience, ensuring that the website is easy to navigate and interact with, making it convenient for users to access the desired services and information.</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Doctors</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'doctors_list' %}" target="_blank">Find Doctor</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-regular fa-user-nurse text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Nurses</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'nurses_List' %}" target="_blank">Find Nurses</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-disease text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Disease</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'diseaseKnowledge' %}" target="_blank">Find Disease</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-solid fa-notes-medical text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary">Frist Aids</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'fristAid' %}" target="_blank" >Find First Aid</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6" style=" margin-left: 280px;">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x a-regular fa-solid fa-user text-primary mb-2"></i>
+                               <h6 class="mb-0 text-primary" >Know type skin disease</h6>
+                                <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'predict_image' %}" target="_blank" >know</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
+                <h1 class="display-4">Excellent Medical Services</h1>
+            </div>
+            <div class="row g-5 justify-content-center" >
+                         <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 250px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-3x fa-user-md  text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Discover your ideal doctor online for a personalized healthcare journey with confidence and ease</h6>
+                        <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'doctors_list' %}" target="_blank" style="margin-top: 20px;">Find Doctor</a>
+                    </div>
+                </div>
+                       <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 250px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-3x fa-regular fa-user-nurse text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Connect with your ideal nurse online for a personalized and seamless healthcare experience, instilling confidence</h6>
+                         <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'nurses_List' %}" target="_blank" style="margin-top: 20px;">Find Nurses</a>
+                    </div>
+                </div>
+                    <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 250px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-3x a-regular fa-disease text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Empower yourself with comprehensive disease information for confident and informed management</h6>
+                        <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'diseaseKnowledge' %}" target="_blank" style="margin-top: 20px;">Find Disease</a>
+                    </div>
+                </div>
+           <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 250px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-3x a-regular fa-solid fa-user text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Gain vital first aid knowledge online, empowering you to provide immediate assistance confidently..</h6>
+                        <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'predict_image' %}" target="_blank"  style="margin-top: 20px;" >Know type of disease</a>
+                    </div>
+                </div>
+                    <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 250px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-3x a-regular fa-solid fa-notes-medical text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Gain vital first aid knowledge online, empowering you to provide immediate assistance confidently.</h6>
+                        <a class="btn btn-dark rounded-pill py-1 px-3 me-1"  href="{% url 'fristAid' %}" target="_blank"  style="margin-top: 20px;" >Find First Aid</a>
+                    </div>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonial</h5>
+                <h1 class="display-4">Patients Say About Our Services</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="{% static 'img/testimonial-1.jpg' %}" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">A fantastic resource for reliable medical assistance! Find your ideal healthcare professional and gain knowledge about diseases and first aid.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="{% static 'img/testimonial-2.jpg' %}" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Highly recommended! This website provides convenient access to doctors, nurses, and valuable information about diseases and first aid.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="{% static 'img/testimonial-3.jpg' %}" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Revolutionize your approach to healthcare! This website offers seamless access to doctors, nurses, and invaluable information for enhanced health literacy and emergency preparedness.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+   <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Any Questions?</h5>
+                <h1 class="display-4">Please Feel Free To Contact Us</h1>
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-2x fa-location-arrow text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">Agriculture Square - Zagazig - Sharkia - Egypt</h6>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-2x fa-phone text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">+0115 176 2384</h6>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                            <i class="fa fa-2x fa-envelope-open text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-0">amrgebil@gmail.com</h6>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+
+{% endblock content %}

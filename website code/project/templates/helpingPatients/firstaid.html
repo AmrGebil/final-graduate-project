@@ -1,0 +1,97 @@
+{% extends 'testbase.html' %}
+{% block title %} Frist Aid{% endblock title%}
+
+{% block content %}
+
+
+<!-- Search Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="font-weight: 1000;">Find Frist Aid</h5>
+            <h1 class="display-4 mb-4" style="font-weight: bold;">Find A your Frist Aid Details</h1>
+        </div>
+        <div class="mx-auto" style="width: 100%; max-width: 600px;">
+            <form method="GET" class="input-group" action="{% url 'fristAid' %}">
+                {% csrf_token %}
+              <select class="form-select border-primary w-25" style="height: 60px;" name="name1">
+                 <option value="" disabled selected style="display:none;">Enter frist aid name</option>
+                <option  value="Air poisoning">Air poisoning</option>
+                <option value="Bites and stings (snake bite)">Bites and stings (snake bite)</option>
+                <option value="Bites and stings ( spider bite )">Bites and stings ( spider bite )</option>
+                  <option value="choking">choking</option>
+                <option value="Diabetes (high blood sugar)">Diabetes (high blood sugar)</option>
+                  <option value="Diabetes (low blood sugar)">Diabetes (low blood sugar)</option>
+                  <option value="degree burns">degree burns</option>
+                  <option value="food poisoning">food poisoning</option>
+                  <option value="High blood pressure">High blood pressure</option>
+                  <option value="Infant choking">Infant choking</option>
+                  <option value="Medication poisoning">Medication poisoning</option>
+                  <option value="muscle tension">muscle tension</option>
+                  <option value="Ingestion of chemicals and household detergents">Ingestion of chemicals and household detergents</option>
+                  <option value="Nose bleeding">Nose bleeding</option>
+                  <option value="Reduction of Blood pressure">Reduction of Blood pressure</option>
+                  <option value="Stings and stings (bee sting)">Stings and stings (bee sting)</option>
+                  <option value="sunstroke">sunstroke</option>
+                  <option value="Third degree burns">Third degree burns</option>
+
+
+
+              </select>
+
+
+              <button class="btn btn-dark border-0 w-25">Search</button>
+            </form>
+          </div>
+    </div>
+</div>
+<!-- Search End -->
+
+
+
+      <!-- Search Result Start -->
+{%  for fristAid in fristAids %}
+    <div class="container"style="padding-left:50px; margin-top: 30px;" >
+        <div class="row"style="justify-content: center;">
+            <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>Frist aid informations</h4></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Name: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{fristAid.name}}</p></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Desciption: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{fristAid.desciption}}</p></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Treatment: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{fristAid.treatment}}</p></h4>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{%  endfor %}
+    <!-- Search Result End -->
+
+
+{% endblock %}>

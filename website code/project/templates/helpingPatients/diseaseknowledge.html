@@ -1,0 +1,95 @@
+{% extends 'testbase.html' %}
+{% block title %}Disease {% endblock title%}
+
+{% block content %}
+
+
+<!-- Search Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="font-weight: 1000;">Find A Disease</h5>
+            <h1 class="display-4 mb-4" style="font-weight: bold;">Find Your Disease Details</h1>
+        </div>
+        <div class="mx-auto" style="width: 100%; max-width: 600px;">
+            <form method="GET" class="input-group" action="{% url 'diseaseKnowledge' %}">
+                {% csrf_token %}
+              <select class="form-select border-primary w-25" style="height: 60px;" name="name1">
+                 <option value="" disabled selected style="display:none;">Enter disease name</option>
+                  <option value="Asthma">Asthma</option>
+                   <option value="Arthritis">Arthritis</option>
+                  <option value="Angina">Angina</option>
+                  <option value="Alzheimer disease">Alzheimer disease</option>
+                  <option value="Bronchitis and Bronchiolitis">Bronchitis and Bronchiolitis</option>
+                  <option  value="Constipation">Constipation</option>
+                   <option value="Cough">Cough</option>
+                  <option value="Cancer">Cancer</option>
+                  <option value="Diabetes">Diabetes</option>
+                  <option value="Fever">Fever</option>
+                <option value="Febrile Seizures">Febrile Seizures</option>
+                  <option value="High blood pressure">High blood pressure</option>
+                  <option value="Heart failure">Heart failure</option>
+                  <option value="Heart attack">Heart attack</option>
+                  <option value="Inherited heart conditions">Inherited heart conditions</option>
+                  <option value="Migraine">Migraine</option>
+                  <option value="Stroke">Stroke</option>
+                  <option value="Stomach Flu (Gastroenteritis)">Stomach Flu (Gastroenteritis)</option>
+                  <option value="Tension headache">Tension headache</option>
+
+
+              </select>
+
+
+              <button class="btn btn-dark border-0 w-25">Search</button>
+            </form>
+          </div>
+    </div>
+</div>
+<!-- Search End -->
+
+       <!-- Search Result Start -->
+  {%  for diseaseKnowledge in diseaseKnowledges %}
+    <div class="container"style="padding-left:50px; margin-top: 30px;" >
+        <div class="row"style="justify-content: center;">
+            <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>Nurse informations</h4></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Name: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{diseaseKnowledge.name}}</p></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Description: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{diseaseKnowledge.desciption}}</p></h4>
+
+                        </div>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> Treatment: <p style="font-size: 25px; font-weight: 100; color: #030303;">{{diseaseKnowledge.treatment}}</p></h4>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{%  endfor %}
+    <!-- Search Result End -->
+
+
+{% endblock %}

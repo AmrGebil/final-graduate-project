@@ -1,0 +1,115 @@
+{% extends 'testbase.html' %}
+{% block title %}Your medical history {% endblock title%}
+
+{% block content %}
+
+
+    <div class="container"style="padding-left:50px; margin-top: 30px;" >
+        <div class="row"style="justify-content: center;">
+            <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>Your medical history</h4></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+
+                            <h4 style="color: #13C5DD;"> illnesses_numbers: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.illnesses_numbers}}</span></h4>
+
+                        </div>
+                        <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> illnesses: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.illnesses}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div style=" width:100px; ">
+                            <h4 style="color: #13C5DD;"> illnesses_descriptions: <span style="font-size: 25px; font-weight: 100; color: #030303; ">{{medicalhistory.illnesses_descriptions}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> allergies: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.allergies}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> surgeries: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.surgeries}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> immunizations: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.immunizations}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> results_of_physical_exams_and_tests: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.results_of_physical_exams_and_tests}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> medicines: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.medicines}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap">
+                            <h4 style="color: #13C5DD;"> medical_rays: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.medical_rays}}</span></h4>
+
+                        </div>
+                         <hr>
+                        <div class="single_wrap" style=" margin-bottom: 30px;">
+                            <h4 style="color: #13C5DD;"> health_habits: <span style="font-size: 25px; font-weight: 100; color: #030303;">{{medicalhistory.health_habits}}</span></h4>
+
+                        </div>
+                         <div class="single_wrap" style=" margin-bottom: 20px;">
+                            <h4 style="color: #13C5DD;"> physical_exams_and_tests_image: </h4>
+                              <img class="img-fluid mx-auto" src="{{ medicalhistory.physical_exams_and_tests_images.url }}" alt="Enter photo" style="height: 700px; width: 500px;">
+
+                        </div>
+                        <div class="single_wrap" style=" margin-bottom: 20px;">
+                            <h4 style="color: #13C5DD;"> medicines_images: </h4>
+                              <img class="img-fluid mx-auto" src="{{ medicalhistory.medicines_images.url }}" alt="Enter photo" style="height: 700px; width: 500px;">
+
+                        </div>
+                        <div class="single_wrap" style=" margin-bottom: 20px;">
+                            <h4 style="color: #13C5DD;"> medical_rays_images: </h4>
+                              <img class="img-fluid mx-auto" src="{{ medicalhistory.medical_rays_images.url }}" alt="Enter photo" style="height: 700px; width: 500px;">
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4" >
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <a class="btn btn-dark rounded-pill py-1 px-3 me-1" href="{% url 'users-profile' %}" target="_blank" style="margin-top: 20px;">Chanage this data</a>
+                        </div>
+                        <div class="job_content">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

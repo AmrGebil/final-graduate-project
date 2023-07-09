@@ -1,0 +1,66 @@
+{% extends 'testbase.html' %}
+{% block title %}type of skin disease {% endblock title%}
+
+{% block content %}
+
+
+    <!-- Search Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+
+                <h1 class="display-4 mb-4" style="font-weight: bold;">Know the type of your skin disease</h1>
+
+            </div>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <form method="post" action="{% url 'predict_image' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+     <label class="small mb-1" style=" font-size: 17px; font-weight: bold; color: #030303; ">Enter your Skin Disease:</label>
+                    <br>
+    <input id="image-upload" type="file" name="image">
+
+                    <hr>
+    <button class="btn btn-dark border-0 w-25">Predict</button>
+     </form>
+              </div>
+        </div>
+        <br>
+    </div>
+    <!-- Search End -->
+
+ {%  if result  %}
+    <div class="container"style="padding-left:50px; margin-top: 30px;" >
+        <div class="row"style="justify-content: center;">
+            <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h3>The result</h3></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+
+                            <h4 style="color: #13C5DD;"> {{result}} </h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+{% endblock %}
