@@ -1,20 +1,6 @@
 from django.shortcuts import render
 from .models import Doctor
 
-# Create your views here.
-# def doctorList(request):
-#     city = request.GET.get('city')
-#     specialty = request.GET.get('specialty')
-#     if len(city)>0 and len(specialty)>0:
-#         doctors = Doctor.objects.filter(his_city=city, his_specialty=specialty)
-#     elif len(specialty)>0:
-#         doctors = Doctor.objects.filter( his_specialty=specialty)
-#     else:
-#        doctors = Doctor.objects.filter(his_city=city)
-#
-#     return render(request,'doctor/doctorsList.html',{'doctors':doctors})
-
-
 def doctorList(request):
     city = request.GET.get('city')
     specialty = request.GET.get('specialty')
