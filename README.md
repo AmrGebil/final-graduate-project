@@ -19,9 +19,9 @@ Follow these steps to set up and run the project locally on your development env
  Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/your-project.git
+   git clone  https://github.com/AmrGebil/final-graduate-project.git
 
-   cd your-project
+   cd final-graduate-project
 
    python -m venv venv
 
@@ -58,6 +58,26 @@ Home Page:
 
 About Us Page:
 ![About Us  ](images/3.PNG)
+
+Services Page:
+![Services page ](images/4.PNG)
+
+About Us Page:
+![Contact Us  ](images/5.PNG)
+
+Create Account Page:
+![Create Account page ](images/6.PNG)
+
+Profile Page:
+![Profile  ](images/8.PNG)
+
+Sign in Page:
+![Sign in  ](images/9.PNG)
+Profile Page:
+![Profile  ](images/8.PNG)
+Profile Page:
+![Profile  ](images/8.PNG)
+
 
 
 
