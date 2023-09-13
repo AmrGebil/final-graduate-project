@@ -31,6 +31,7 @@ Follow these steps to set up and run the project locally on your development env
 
    python manage.py createsuperuser
 
+
    python manage.py runserver
 
 
