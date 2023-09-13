@@ -52,31 +52,7 @@ This project provides a range of valuable functions:
 
 Explore these features to make the most of this project and enhance your healthcare experience.
 
-# Screenshots
-Home Page:
-![Home page ](images/2.PNG)
 
-About Us Page:
-![About Us  ](images/3.PNG)
-
-Services Page:
-![Services page ](images/4.PNG)
-
-About Us Page:
-![Contact Us  ](images/5.PNG)
-
-Create Account Page:
-![Create Account page ](images/6.PNG)
-
-Profile Page:
-![Profile  ](images/8.PNG)
-
-Sign in Page:
-![Sign in  ](images/9.PNG)
-Profile Page:
-![Profile  ](images/8.PNG)
-Profile Page:
-![Profile  ](images/8.PNG)
 
 
 
