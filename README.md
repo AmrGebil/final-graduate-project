@@ -20,11 +20,8 @@ Follow these steps to set up and run the project locally on your development env
 
    ```bash
    git clone https://github.com/yourusername/your-project.git
-```bash
    cd your-project
-```bash
    python -m venv venv
-```bash
    pip install -r requirements.txt
 ```bash
    python manage.py migrate
