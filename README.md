@@ -12,3 +12,12 @@ A comprehensive online project dedicated to improving patient care by offering a
 - CSS3
 - JavaScript
 
+# Installation
+
+Follow these steps to set up and run the project locally on your development environment:
+
+1. **Clone the repository to your local machine:**
+
+   ```bash
+   git clone https://github.com/yourusername/your-project.git
+
